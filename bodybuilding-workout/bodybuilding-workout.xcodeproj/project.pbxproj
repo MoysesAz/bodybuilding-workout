@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95F9EF8228CFCDFB004803F3 /* bodybuilding_workoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */; };
+		95F9EF8428CFCDFB004803F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8328CFCDFB004803F3 /* ContentView.swift */; };
+		95F9EF8628CFCDFC004803F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8528CFCDFC004803F3 /* Assets.xcassets */; };
+		95F9EF8928CFCDFC004803F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8828CFCDFC004803F3 /* Preview Assets.xcassets */; };
+		95F9EF8B28CFCDFC004803F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8A28CFCDFC004803F3 /* Persistence.swift */; };
+		95F9EF8E28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */; };
+		95F9EF9828CFCDFC004803F3 /* bodybuilding_workoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF9728CFCDFC004803F3 /* bodybuilding_workoutTests.swift */; };
+		95F9EFA228CFCDFC004803F3 /* bodybuilding_workoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EFA128CFCDFC004803F3 /* bodybuilding_workoutUITests.swift */; };
+		95F9EFA428CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EFA328CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95F9EF9428CFCDFC004803F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95F9EF7628CFCDFB004803F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95F9EF7D28CFCDFB004803F3;
+			remoteInfo = "bodybuilding-workout";
+		};
+		95F9EF9E28CFCDFC004803F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95F9EF7628CFCDFB004803F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95F9EF7D28CFCDFB004803F3;
+			remoteInfo = "bodybuilding-workout";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95F9EF7E28CFCDFB004803F3 /* bodybuilding-workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bodybuilding-workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutApp.swift; sourceTree = "<group>"; };
+		95F9EF8328CFCDFB004803F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95F9EF8528CFCDFC004803F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95F9EF8828CFCDFC004803F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95F9EF8A28CFCDFC004803F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bodybuilding_workout.xcdatamodel; sourceTree = "<group>"; };
+		95F9EF9328CFCDFC004803F3 /* bodybuilding-workoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bodybuilding-workoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F9EF9728CFCDFC004803F3 /* bodybuilding_workoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutTests.swift; sourceTree = "<group>"; };
+		95F9EF9D28CFCDFC004803F3 /* bodybuilding-workoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bodybuilding-workoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F9EFA128CFCDFC004803F3 /* bodybuilding_workoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutUITests.swift; sourceTree = "<group>"; };
+		95F9EFA328CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95F9EF7B28CFCDFB004803F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F9EF9028CFCDFC004803F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F9EF9A28CFCDFC004803F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95F9EF7528CFCDFB004803F3 = {
+			isa = PBXGroup;
+			children = (
+				95F9EF8028CFCDFB004803F3 /* bodybuilding-workout */,
+				95F9EF9628CFCDFC004803F3 /* bodybuilding-workoutTests */,
+				95F9EFA028CFCDFC004803F3 /* bodybuilding-workoutUITests */,
+				95F9EF7F28CFCDFB004803F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95F9EF7F28CFCDFB004803F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95F9EF7E28CFCDFB004803F3 /* bodybuilding-workout.app */,
+				95F9EF9328CFCDFC004803F3 /* bodybuilding-workoutTests.xctest */,
+				95F9EF9D28CFCDFC004803F3 /* bodybuilding-workoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95F9EF8028CFCDFB004803F3 /* bodybuilding-workout */ = {
+			isa = PBXGroup;
+			children = (
+				95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */,
+				95F9EF8328CFCDFB004803F3 /* ContentView.swift */,
+				95F9EF8528CFCDFC004803F3 /* Assets.xcassets */,
+				95F9EF8A28CFCDFC004803F3 /* Persistence.swift */,
+				95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */,
+				95F9EF8728CFCDFC004803F3 /* Preview Content */,
+			);
+			path = "bodybuilding-workout";
+			sourceTree = "<group>";
+		};
+		95F9EF8728CFCDFC004803F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95F9EF8828CFCDFC004803F3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95F9EF9628CFCDFC004803F3 /* bodybuilding-workoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				95F9EF9728CFCDFC004803F3 /* bodybuilding_workoutTests.swift */,
+			);
+			path = "bodybuilding-workoutTests";
+			sourceTree = "<group>";
+		};
+		95F9EFA028CFCDFC004803F3 /* bodybuilding-workoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95F9EFA128CFCDFC004803F3 /* bodybuilding_workoutUITests.swift */,
+				95F9EFA328CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift */,
+			);
+			path = "bodybuilding-workoutUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95F9EF7D28CFCDFB004803F3 /* bodybuilding-workout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F9EFA728CFCDFC004803F3 /* Build configuration list for PBXNativeTarget "bodybuilding-workout" */;
+			buildPhases = (
+				95F9EF7A28CFCDFB004803F3 /* Sources */,
+				95F9EF7B28CFCDFB004803F3 /* Frameworks */,
+				95F9EF7C28CFCDFB004803F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bodybuilding-workout";
+			productName = "bodybuilding-workout";
+			productReference = 95F9EF7E28CFCDFB004803F3 /* bodybuilding-workout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95F9EF9228CFCDFC004803F3 /* bodybuilding-workoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F9EFAA28CFCDFC004803F3 /* Build configuration list for PBXNativeTarget "bodybuilding-workoutTests" */;
+			buildPhases = (
+				95F9EF8F28CFCDFC004803F3 /* Sources */,
+				95F9EF9028CFCDFC004803F3 /* Frameworks */,
+				95F9EF9128CFCDFC004803F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95F9EF9528CFCDFC004803F3 /* PBXTargetDependency */,
+			);
+			name = "bodybuilding-workoutTests";
+			productName = "bodybuilding-workoutTests";
+			productReference = 95F9EF9328CFCDFC004803F3 /* bodybuilding-workoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95F9EF9C28CFCDFC004803F3 /* bodybuilding-workoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F9EFAD28CFCDFC004803F3 /* Build configuration list for PBXNativeTarget "bodybuilding-workoutUITests" */;
+			buildPhases = (
+				95F9EF9928CFCDFC004803F3 /* Sources */,
+				95F9EF9A28CFCDFC004803F3 /* Frameworks */,
+				95F9EF9B28CFCDFC004803F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95F9EF9F28CFCDFC004803F3 /* PBXTargetDependency */,
+			);
+			name = "bodybuilding-workoutUITests";
+			productName = "bodybuilding-workoutUITests";
+			productReference = 95F9EF9D28CFCDFC004803F3 /* bodybuilding-workoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95F9EF7628CFCDFB004803F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					95F9EF7D28CFCDFB004803F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					95F9EF9228CFCDFC004803F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 95F9EF7D28CFCDFB004803F3;
+					};
+					95F9EF9C28CFCDFC004803F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 95F9EF7D28CFCDFB004803F3;
+					};
+				};
+			};
+			buildConfigurationList = 95F9EF7928CFCDFB004803F3 /* Build configuration list for PBXProject "bodybuilding-workout" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95F9EF7528CFCDFB004803F3;
+			productRefGroup = 95F9EF7F28CFCDFB004803F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95F9EF7D28CFCDFB004803F3 /* bodybuilding-workout */,
+				95F9EF9228CFCDFC004803F3 /* bodybuilding-workoutTests */,
+				95F9EF9C28CFCDFC004803F3 /* bodybuilding-workoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95F9EF7C28CFCDFB004803F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F9EF8928CFCDFC004803F3 /* Preview Assets.xcassets in Resources */,
+				95F9EF8628CFCDFC004803F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F9EF9128CFCDFC004803F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F9EF9B28CFCDFC004803F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95F9EF7A28CFCDFB004803F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F9EF8B28CFCDFC004803F3 /* Persistence.swift in Sources */,
+				95F9EF8E28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld in Sources */,
+				95F9EF8428CFCDFB004803F3 /* ContentView.swift in Sources */,
+				95F9EF8228CFCDFB004803F3 /* bodybuilding_workoutApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F9EF8F28CFCDFC004803F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F9EF9828CFCDFC004803F3 /* bodybuilding_workoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F9EF9928CFCDFC004803F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F9EFA428CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift in Sources */,
+				95F9EFA228CFCDFC004803F3 /* bodybuilding_workoutUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95F9EF9528CFCDFC004803F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95F9EF7D28CFCDFB004803F3 /* bodybuilding-workout */;
+			targetProxy = 95F9EF9428CFCDFC004803F3 /* PBXContainerItemProxy */;
+		};
+		95F9EF9F28CFCDFC004803F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95F9EF7D28CFCDFB004803F3 /* bodybuilding-workout */;
+			targetProxy = 95F9EF9E28CFCDFC004803F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		95F9EFA528CFCDFC004803F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95F9EFA628CFCDFC004803F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95F9EFA828CFCDFC004803F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"bodybuilding-workout/Preview Content\"";
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.bodybuilding-workout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95F9EFA928CFCDFC004803F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"bodybuilding-workout/Preview Content\"";
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.bodybuilding-workout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		95F9EFAB28CFCDFC004803F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.bodybuilding-workoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bodybuilding-workout.app/bodybuilding-workout";
+			};
+			name = Debug;
+		};
+		95F9EFAC28CFCDFC004803F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.bodybuilding-workoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bodybuilding-workout.app/bodybuilding-workout";
+			};
+			name = Release;
+		};
+		95F9EFAE28CFCDFC004803F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.bodybuilding-workoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bodybuilding-workout";
+			};
+			name = Debug;
+		};
+		95F9EFAF28CFCDFC004803F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.bodybuilding-workoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bodybuilding-workout";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95F9EF7928CFCDFB004803F3 /* Build configuration list for PBXProject "bodybuilding-workout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F9EFA528CFCDFC004803F3 /* Debug */,
+				95F9EFA628CFCDFC004803F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95F9EFA728CFCDFC004803F3 /* Build configuration list for PBXNativeTarget "bodybuilding-workout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F9EFA828CFCDFC004803F3 /* Debug */,
+				95F9EFA928CFCDFC004803F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95F9EFAA28CFCDFC004803F3 /* Build configuration list for PBXNativeTarget "bodybuilding-workoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F9EFAB28CFCDFC004803F3 /* Debug */,
+				95F9EFAC28CFCDFC004803F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95F9EFAD28CFCDFC004803F3 /* Build configuration list for PBXNativeTarget "bodybuilding-workoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F9EFAE28CFCDFC004803F3 /* Debug */,
+				95F9EFAF28CFCDFC004803F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */,
+			);
+			currentVersion = 95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */;
+			path = bodybuilding_workout.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95F9EF7628CFCDFB004803F3 /* Project object */;
+}
