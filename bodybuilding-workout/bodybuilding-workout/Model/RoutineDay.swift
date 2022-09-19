@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RoutineDay {
+struct RoutineDay {
     var id = UUID()
     var name: String
     var exercices: [Exercise] = []
@@ -16,8 +16,14 @@ class RoutineDay {
         self.name = name
         self.exercices = exercices
     }
-}
 
+    mutating func addExercise(){
+        exercices.append(
+            Exercise(name: "Pé de Cabra Livre", series: 3, form:[ExerciseForm(
+            description: "Cabeça Para Baixo", observation: "Cuidado"
+        )]))
+    }
+}
 
 extension RoutineDay: Hashable  {
     public func hash(into hasher: inout Hasher) {

@@ -8,25 +8,33 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    @Binding var workouts: [Workout]
-
+    @EnvironmentObject var mock: MockCoreData
+    
     var body: some View {
-        List {
-            Section(header:
-                        Text("Workouts")
-                .bold()
-            ){
-                ForEach($workouts, id: \.self){ $workout in
-                    NavigationLink(destination: RoutineDaysView(routineDays: $workout.routineDays)){
-                        HStack{
-                            Text(workout.name)
-                            Spacer()
-                            Percentage(value: 35)
+        VStack{
+            List {
+                Section(header:
+                            Text("Workouts")
+                    .bold()
+                ){
+                    ForEach(mock.workouts.indices, id: \.self){ indexWorkout in
+                        NavigationLink(destination: RoutineDaysView(indexWorkout: indexWorkout)){
+                            Text(mock.workouts[indexWorkout].name)
                         }
                     }
                 }
             }
-        }.navigationBarTitle("Workout", displayMode: .inline)
+            .navigationBarTitle("Workout", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button{
+                        mock.addWorkout(name: "Treino1")
+                    }label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+        }
     }
 }
 

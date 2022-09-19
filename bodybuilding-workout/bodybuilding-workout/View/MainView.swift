@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var mock = mockDeus
+    @EnvironmentObject var mock: MockCoreData
+
     var body: some View {
         NavigationView {
             Button(action: {
             }, label: {
-                if mock.isEmpty {
-                    NavigationLink(destination: ContentView()) {
+                if mock.workouts.isEmpty {
+                    NavigationLink(destination: WorkoutView()) {
                         Text("Criar treino")
                             .bold()
                     }
+
                 } else {
-                    NavigationLink(destination: WorkoutView(workouts: $mock)) {
+                    NavigationLink(destination: WorkoutView()) {
                         Text("Ir Para Treino")
                             .bold()
                     }

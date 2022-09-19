@@ -7,7 +7,14 @@
 
 import Foundation
 
-class Form {
+class ExerciseForm {
+    init(description: String? = nil, observation: String? = nil, repetitions: Int? = nil, combined: String? = nil) {
+        self.description = description
+        self.observation = observation
+        self.repetitions = repetitions
+        self.combined = combined
+    }
+
     var description: String?
     var observation: String?
     var repetitions: Int?

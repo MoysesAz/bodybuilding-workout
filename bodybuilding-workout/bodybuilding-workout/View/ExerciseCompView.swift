@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ExerciseCompView: View {
-    @Binding var exercises: [Exercise]
+    @EnvironmentObject var mock: MockCoreData
+    var indexWorkout: Int
+    var indexDay: Int
+
     var body: some View {
-        ForEach($exercises, id: \.self) { $exercise in
-            HStack(spacing: 20) {
-                Text(exercise.name)
-                Spacer()
-                Percentage(value: 77)
-                    .padding([.trailing], 10)
+        ForEach(mock.workouts[indexWorkout].routineDays[indexDay].exercices.indices, id: \.self) { indexExercise in
+            NavigationLink(destination: WorkoutsOfTheDay(exercise: $mock.workouts[indexWorkout].routineDays[indexDay].exercices[indexExercise])){
+                HStack(spacing: 20) {
+                    Text(mock.workouts[indexWorkout].routineDays[indexDay].exercices[indexExercise].name)
+                    Spacer()
+                    Percentage(value: 77)
+                        .padding([.trailing], 10)
+                }
             }
         }
+
     }
+    
 }
 
 //struct ExerciseCompView_Previews: PreviewProvider {

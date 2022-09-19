@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct RoutineDaysView: View {
-    @Binding var routineDays: [RoutineDays]
+    @EnvironmentObject var mock: MockCoreData
+    var indexWorkout: Int
+    @State var isToggled = false
+
     var body: some View {
         List {
-            ForEach($routineDays, id: \.self) { $routine in
-                Section(routine.name) {
-                    ExerciseCompView(exercises: $routine.exercices)
+            ForEach(mock.workouts[indexWorkout].routineDays.indices, id: \.self) { indexDay in
+                Section(mock.workouts[indexWorkout].routineDays[indexDay].name) {
+                    ExerciseCompView(indexWorkout: indexWorkout, indexDay: indexDay)
                 }
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button{
+                    mock.workouts[indexWorkout].routineDays.append(RoutineDay(name: "bumm"))
+                }label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+
 //        .listStyle(SidebarListStyle())
 //        List {
 //            Section(header:

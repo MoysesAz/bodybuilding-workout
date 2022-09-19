@@ -7,10 +7,27 @@
 
 import Foundation
 
-struct Exercise: Hashable {
+class Exercise {
+    var id = UUID()
     var name: String
     var series: Int?
-    var form: [Form]
+    var form: [ExerciseForm]
+    
+    init(name: String, series: Int? = nil, form: [ExerciseForm]) {
+        self.name = name
+        self.series = series
+        self.form = form
+    }
 }
 
+extension Exercise: Identifiable, Hashable  {
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(id.uuidString)
+    }
+
+    public static func == (lhs: Exercise, rhs: Exercise) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+}
 

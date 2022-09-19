@@ -7,16 +7,42 @@
 
 import SwiftUI
 
-struct Workout: Hashable {
+struct Workout {
+    init(name: String, routineDays: [RoutineDay] = [
+        RoutineDay(name: "Segunda", exercices: [
+
+            Exercise(name: "Agachamento Livre", series: 3, form:[ExerciseForm(
+                description: "Cabeça Para Baixo", observation: "Cuidado"
+            )])
+
+        ]),
+        RoutineDay(name: "Terça", exercices: []),
+        RoutineDay(name: "Quarta", exercices: []),
+        RoutineDay(name: "Quinta", exercices: []),
+        RoutineDay(name: "Sexta", exercices: []),
+        RoutineDay(name: "Sabado", exercices: []),
+        RoutineDay(name: "Domingo", exercices: [])
+    ]) {
+        self.name = name
+        self.routineDays = routineDays
+    }
+
+    var id = UUID()
     var name: String
-    var routineDays: [RoutineDays] = [
-        RoutineDays(name: "Segunda", exercices: [mock1, mock2]),
-        RoutineDays(name: "Terça", exercices: [mock1, mock2]),
-        RoutineDays(name: "Quarta", exercices: []),
-        RoutineDays(name: "Quinta", exercices: []),
-        RoutineDays(name: "Sexta", exercices: []),
-        RoutineDays(name: "Sabado", exercices: []),
-        RoutineDays(name: "Domingo", exercices: [])
-    ]
+    var routineDays: [RoutineDay]
+    var percentege: Float?
 }
 
+
+
+extension Workout: Identifiable, Hashable  {
+
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(id.uuidString)
+    }
+
+    public static func == (lhs: Workout, rhs: Workout) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+}

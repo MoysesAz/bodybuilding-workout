@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct WorkoutsOfTheDay: View {
+    @EnvironmentObject var mock: MockCoreData
     @Binding var exercise: Exercise
     @State private var favoriteColor = 0
 
@@ -20,7 +21,7 @@ struct WorkoutsOfTheDay: View {
             ){
                 Picker("Teste", selection: $favoriteColor){
 
-                    ForEach(0..<exercise.form.count, id: \.self) {index in
+                    ForEach(exercise.form.indices, id: \.self) {index in
                         Text("\(index + 1)").tag(index)
                     }
 

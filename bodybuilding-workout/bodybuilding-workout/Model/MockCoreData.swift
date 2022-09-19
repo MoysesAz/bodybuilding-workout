@@ -7,14 +7,26 @@
 
 import SwiftUI
 
-struct MockCoreData: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class MockCoreData: ObservableObject {
+    var id = UUID()
+
+    @Published var workouts: [Workout] = [Workout(name: "teste")]
+
+    func addWorkout(name: String){
+        workouts.append(Workout(name: name))
+    }
+
+    func removeWorkout(value: Int){
+        workouts.remove(at: value)
     }
 }
 
-struct MockCoreData_Previews: PreviewProvider {
-    static var previews: some View {
-        MockCoreData()
+extension MockCoreData: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(id.uuidString)
+    }
+
+    public static func == (lhs: MockCoreData, rhs: MockCoreData) -> Bool {
+        return lhs.id == rhs.id
     }
 }

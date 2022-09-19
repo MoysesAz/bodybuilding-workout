@@ -15,7 +15,7 @@ struct bodybuilding_workoutApp: App {
         WindowGroup {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            MainView()
+            MainView().environmentObject(MockCoreData())
         }
     }
 }
