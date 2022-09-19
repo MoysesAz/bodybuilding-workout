@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Form: Hashable {
+class Form {
     var description: String?
     var observation: String?
     var repetitions: Int?
