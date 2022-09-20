@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct FieldRepetitions: View {
-    @Binding var exercise: Exercise
-    @Binding var favoriteColor: Int
+    @State var form: Form
 
     var body: some View {
-        if exercise.form[favoriteColor].repetitions != nil {
+        if form.repetitions != 0 {
             Section(header:
                         Text("Repetitions")
             ){
-                Text(String(exercise.form[favoriteColor].repetitions!))
+                Text(String(form.repetitions))
             }
         }
     }

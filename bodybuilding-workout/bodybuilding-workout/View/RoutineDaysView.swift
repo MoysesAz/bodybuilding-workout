@@ -1,53 +1,54 @@
-//
-//  RoutinesView.swift
-//  bodybuilding-workout
-//
-//  Created by Moyses Miranda do Vale Azevedo on 15/09/22.
-//
-
 import SwiftUI
 
 struct RoutineDaysView: View {
-    @EnvironmentObject var mock: MockCoreData
-    var indexWorkout: Int
-    @State var isToggled = false
+
+    @State var workout: Workout
+
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @FetchRequest(
+        entity: RoutineDays.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \RoutineDays.name, ascending: true)]
+    ) var routines: FetchedResults<RoutineDays>
 
     var body: some View {
+        let filteredRoutine = routines.filter({$0.ofWorkout?.objectID == workout.objectID})
         List {
-            ForEach(mock.workouts[indexWorkout].routineDays.indices, id: \.self) { indexDay in
-                Section(mock.workouts[indexWorkout].routineDays[indexDay].name) {
-                    ExerciseCompView(indexWorkout: indexWorkout, indexDay: indexDay)
+            Section(header:
+                        Text("Week")
+                .bold()
+            ){
+                ForEach(filteredRoutine, id: \.self){ routine in
+                    NavigationLink(destination: ExerciseCompView(routine: routine)){
+                        Text(routine.name ?? "Unknown")
+                    }
                 }
+                .onDelete(perform: deleteRoutine)
             }
         }
+        .navigationBarTitle("Week", displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
-                    mock.workouts[indexWorkout].routineDays.append(RoutineDay(name: "bumm"))
+                    addRoutine(name: "New Routine")
                 }label: {
                     Image(systemName: "plus")
                 }
             }
         }
+    }
+    func addRoutine(name: String) {
+        let routine = RoutineDays(context: managedObjectContext)
+        routine.name = name
+        routine.ofWorkout = workout
+        PersistenceController.shared.save()
+    }
 
-//        .listStyle(SidebarListStyle())
-//        List {
-//            Section(header:
-//                        Text("Routines")
-//                .bold()
-//            ){
-//                ForEach($routineDays, id: \.self){ $routineDay in
-//                    NavigationLink(destination: ExerciseView(exercises: $routineDay.exercices)){
-//                        HStack{
-//                            Text(routineDay.name)
-//                            Spacer()
-//                            Percentage(value: 35)
-//                        }
-//                    }
-//                }
-//            }
-//        }.navigationBarTitle("Routine Days", displayMode: .inline)
-
+    func deleteRoutine(at offsets: IndexSet) {
+        for index in offsets {
+            let routine = routines[index]
+            PersistenceController.shared.delete(routine)
+        }
     }
 }
 

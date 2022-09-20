@@ -1,31 +1,57 @@
-//
-//  ExerciseCompView.swift
-//  bodybuilding-workout
-//
-//  Created by Moyses Miranda do Vale Azevedo on 15/09/22.
-//
-
 import SwiftUI
 
 struct ExerciseCompView: View {
-    @EnvironmentObject var mock: MockCoreData
-    var indexWorkout: Int
-    var indexDay: Int
+
+    @State var routine: RoutineDays
+
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @FetchRequest(
+        entity: Exercise.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Exercise.name, ascending: true)]
+    ) var exercises: FetchedResults<Exercise>
 
     var body: some View {
-        ForEach(mock.workouts[indexWorkout].routineDays[indexDay].exercices.indices, id: \.self) { indexExercise in
-            NavigationLink(destination: WorkoutsOfTheDay(exercise: $mock.workouts[indexWorkout].routineDays[indexDay].exercices[indexExercise])){
-                HStack(spacing: 20) {
-                    Text(mock.workouts[indexWorkout].routineDays[indexDay].exercices[indexExercise].name)
-                    Spacer()
-                    Percentage(value: 77)
-                        .padding([.trailing], 10)
+        let filteredExercise = exercises.filter({$0.routineDays?.objectID == routine.objectID})
+        List {
+            Section(header:
+                        Text("Exercises")
+                .bold()
+            ){
+                ForEach(filteredExercise, id: \.self){ exercise in
+                    NavigationLink(destination: WorkoutsOfTheDay(exercise: exercise)){
+                        Text(exercise.name ?? "Unknown")
+                    }
+                }
+                .onDelete(perform: deleteExercise)
+            }
+        }
+        .navigationBarTitle("Exercises", displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button{
+                    addExercise(name: "New Exercise")
+                }label: {
+                    Image(systemName: "plus")
                 }
             }
         }
-
     }
-    
+
+    func addExercise(name: String) {
+        let exercise = Exercise(context: managedObjectContext)
+        exercise.name = name
+        exercise.routineDays = routine
+        PersistenceController.shared.save()
+    }
+
+    func deleteExercise(at offsets: IndexSet) {
+        for index in offsets {
+            let exercise = exercises[index]
+            PersistenceController.shared.delete(exercise)
+        }
+    }
+
 }
 
 //struct ExerciseCompView_Previews: PreviewProvider {

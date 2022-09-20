@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct FieldObservation: View {
-    @Binding var exercise: Exercise
-    @Binding var favoriteColor: Int
+    @State var form: Form
 
     var body: some View {
-        if exercise.form[favoriteColor].observation != nil {
+        if form.observation != nil {
             Section(header:
-                        Text("Observation")
+                        Text("Observation: ")
             ){
-                Text(exercise.form[favoriteColor].observation!)
+                Text(form.observation ?? "No observation")
             }
         }    }
 }

@@ -24,7 +24,7 @@
 		95F9EF8628CFCDFC004803F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8528CFCDFC004803F3 /* Assets.xcassets */; };
 		95F9EF8928CFCDFC004803F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8828CFCDFC004803F3 /* Preview Assets.xcassets */; };
 		95F9EF8B28CFCDFC004803F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8A28CFCDFC004803F3 /* Persistence.swift */; };
-		95F9EF8E28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */; };
+		95F9EF8E28CFCDFC004803F3 /* bodybuilding-workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8C28CFCDFC004803F3 /* bodybuilding-workout.xcdatamodeld */; };
 		95F9EF9828CFCDFC004803F3 /* bodybuilding_workoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF9728CFCDFC004803F3 /* bodybuilding_workoutTests.swift */; };
 		95F9EFA228CFCDFC004803F3 /* bodybuilding_workoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EFA128CFCDFC004803F3 /* bodybuilding_workoutUITests.swift */; };
 		95F9EFA428CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EFA328CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift */; };
@@ -148,7 +148,7 @@
 				95F9EFB428D0095D004803F3 /* Model */,
 				95F9EF8528CFCDFC004803F3 /* Assets.xcassets */,
 				95F9EF8A28CFCDFC004803F3 /* Persistence.swift */,
-				95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */,
+				95F9EF8C28CFCDFC004803F3 /* bodybuilding-workout.xcdatamodeld */,
 				95F9EF8728CFCDFC004803F3 /* Preview Content */,
 			);
 			path = "bodybuilding-workout";
@@ -348,7 +348,7 @@
 				95D9041228D25A710093C981 /* WorkoutsOfTheDay.swift in Sources */,
 				95F9EF8B28CFCDFC004803F3 /* Persistence.swift in Sources */,
 				95D9041028D259080093C981 /* Percentage.swift in Sources */,
-				95F9EF8E28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld in Sources */,
+				95F9EF8E28CFCDFC004803F3 /* bodybuilding-workout.xcdatamodeld in Sources */,
 				957091D528D34C5000071557 /* Workout.swift in Sources */,
 				957091DD28D3536100071557 /* RoutineDaysView.swift in Sources */,
 				957091D728D34CAC00071557 /* RoutineDay.swift in Sources */,
@@ -525,7 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bodybuilding-workout/Preview Content\"";
-				DEVELOPMENT_TEAM = 35GM6XG62S;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -533,6 +533,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,7 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bodybuilding-workout/Preview Content\"";
-				DEVELOPMENT_TEAM = 35GM6XG62S;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -562,6 +563,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -693,13 +695,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */ = {
+		95F9EF8C28CFCDFC004803F3 /* bodybuilding-workout.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */,
 			);
 			currentVersion = 95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */;
-			path = bodybuilding_workout.xcdatamodeld;
+			path = "bodybuilding-workout.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

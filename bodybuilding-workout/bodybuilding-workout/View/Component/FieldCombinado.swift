@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct FieldCombinado: View {
-    @Binding var exercise: Exercise
-    @Binding var favoriteColor: Int
+    @State var form: Form
 
     var body: some View {
-        if exercise.form[favoriteColor].combined != nil {
+        if form.combined != nil {
             Section(header:
-                        Text("Mix:")
+                        Text("Combined:")
             ){
-                Text(exercise.form[favoriteColor].combined!)
+                Text(form.combined ?? "Not combined")
 
             }
         }

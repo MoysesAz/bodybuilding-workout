@@ -1,33 +1,23 @@
-//
-//  Main.swift
-//  bodybuilding-workout
-//
-//  Created by Moyses Miranda do Vale Azevedo on 12/09/22.
-//
-
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var mock: MockCoreData
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @FetchRequest(
+        entity: Workout.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Workout.name, ascending: true)]
+    ) var workouts: FetchedResults<Workout>
 
     var body: some View {
         NavigationView {
             Button(action: {
-            }, label: {
-                if mock.workouts.isEmpty {
-                    NavigationLink(destination: WorkoutView()) {
-                        Text("Criar treino")
-                            .bold()
-                    }
 
-                } else {
-                    NavigationLink(destination: WorkoutView()) {
-                        Text("Ir Para Treino")
-                            .bold()
-                    }
+            }, label: {
+                NavigationLink(destination: WorkoutView()) {
+                    Text(workouts.isEmpty ? "Criar treino": "Ir Para Treino")
+                        .bold()
                 }
             })
-
         }
     }
 }
