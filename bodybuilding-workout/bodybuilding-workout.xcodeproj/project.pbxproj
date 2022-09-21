@@ -11,11 +11,10 @@
 		95F9EF8428CFCDFB004803F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8328CFCDFB004803F3 /* ContentView.swift */; };
 		95F9EF8628CFCDFC004803F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8528CFCDFC004803F3 /* Assets.xcassets */; };
 		95F9EF8928CFCDFC004803F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8828CFCDFC004803F3 /* Preview Assets.xcassets */; };
-		95F9EF8B28CFCDFC004803F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8A28CFCDFC004803F3 /* Persistence.swift */; };
-		95F9EF8E28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */; };
 		95F9EF9828CFCDFC004803F3 /* bodybuilding_workoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF9728CFCDFC004803F3 /* bodybuilding_workoutTests.swift */; };
 		95F9EFA228CFCDFC004803F3 /* bodybuilding_workoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EFA128CFCDFC004803F3 /* bodybuilding_workoutUITests.swift */; };
 		95F9EFA428CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EFA328CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift */; };
+		95FDE78528D9E25D00570865 /* ListaEditavel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FDE78428D9E25D00570865 /* ListaEditavel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +40,12 @@
 		95F9EF8328CFCDFB004803F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95F9EF8528CFCDFC004803F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95F9EF8828CFCDFC004803F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95F9EF8A28CFCDFC004803F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bodybuilding_workout.xcdatamodel; sourceTree = "<group>"; };
 		95F9EF9328CFCDFC004803F3 /* bodybuilding-workoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bodybuilding-workoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F9EF9728CFCDFC004803F3 /* bodybuilding_workoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutTests.swift; sourceTree = "<group>"; };
 		95F9EF9D28CFCDFC004803F3 /* bodybuilding-workoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bodybuilding-workoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F9EFA128CFCDFC004803F3 /* bodybuilding_workoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutUITests.swift; sourceTree = "<group>"; };
 		95F9EFA328CFCDFC004803F3 /* bodybuilding_workoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95FDE78428D9E25D00570865 /* ListaEditavel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaEditavel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +98,8 @@
 			children = (
 				95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */,
 				95F9EF8328CFCDFB004803F3 /* ContentView.swift */,
+				95FDE78428D9E25D00570865 /* ListaEditavel.swift */,
 				95F9EF8528CFCDFC004803F3 /* Assets.xcassets */,
-				95F9EF8A28CFCDFC004803F3 /* Persistence.swift */,
-				95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */,
 				95F9EF8728CFCDFC004803F3 /* Preview Content */,
 			);
 			path = "bodybuilding-workout";
@@ -263,8 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F9EF8B28CFCDFC004803F3 /* Persistence.swift in Sources */,
-				95F9EF8E28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld in Sources */,
+				95FDE78528D9E25D00570865 /* ListaEditavel.swift in Sources */,
 				95F9EF8428CFCDFB004803F3 /* ContentView.swift in Sources */,
 				95F9EF8228CFCDFB004803F3 /* bodybuilding_workoutApp.swift in Sources */,
 			);
@@ -591,19 +587,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		95F9EF8C28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */,
-			);
-			currentVersion = 95F9EF8D28CFCDFC004803F3 /* bodybuilding_workout.xcdatamodel */;
-			path = bodybuilding_workout.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 95F9EF7628CFCDFB004803F3 /* Project object */;
 }
