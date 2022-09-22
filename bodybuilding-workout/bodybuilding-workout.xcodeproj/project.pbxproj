@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9530BF8B28DCCA0F003C3548 /* ProgressCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530BF8A28DCCA0F003C3548 /* ProgressCount.swift */; };
 		95F9EF8228CFCDFB004803F3 /* bodybuilding_workoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */; };
 		95F9EF8428CFCDFB004803F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F9EF8328CFCDFB004803F3 /* ContentView.swift */; };
 		95F9EF8628CFCDFC004803F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F9EF8528CFCDFC004803F3 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9530BF8A28DCCA0F003C3548 /* ProgressCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCount.swift; sourceTree = "<group>"; };
 		95F9EF7E28CFCDFB004803F3 /* bodybuilding-workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bodybuilding-workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodybuilding_workoutApp.swift; sourceTree = "<group>"; };
 		95F9EF8328CFCDFB004803F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				95F9EF8128CFCDFB004803F3 /* bodybuilding_workoutApp.swift */,
 				95F9EF8328CFCDFB004803F3 /* ContentView.swift */,
+				9530BF8A28DCCA0F003C3548 /* ProgressCount.swift */,
 				95FDE78428D9E25D00570865 /* ListaEditavel.swift */,
 				95F9EF8528CFCDFC004803F3 /* Assets.xcassets */,
 				95F9EF8728CFCDFC004803F3 /* Preview Content */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9530BF8B28DCCA0F003C3548 /* ProgressCount.swift in Sources */,
 				95FDE78528D9E25D00570865 /* ListaEditavel.swift in Sources */,
 				95F9EF8428CFCDFB004803F3 /* ContentView.swift in Sources */,
 				95F9EF8228CFCDFB004803F3 /* bodybuilding_workoutApp.swift in Sources */,
