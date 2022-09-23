@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AddRoutineView: View {
     @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.colorScheme) var colorScheme
     @State var routineVM: RoutineViewModel
     @Binding var addRoutineView: Bool
     @Binding var routineChanged: Bool
@@ -12,6 +13,7 @@ struct AddRoutineView: View {
                 Form {
                     Section {
                         TextField("Nome do Rotina", text: $name)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     } header: {
                         Text("Rotina")
                             .bold()

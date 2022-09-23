@@ -21,13 +21,32 @@ struct HomeView: View {
     @State var exerciseContentView = false
     @State var routineContentView = false
 
+    @State var addExerciseView = false
+    @State var exerciseChanged = false
+
+    @State var addRoutineView = false
+    @State var routineChanged = false
+
     var body: some View {
         VStack {
             HStack {
+                Spacer()
                 Text(title)
                     .bold()
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
+                    .padding(.leading, 45)
+                Spacer()
+                Button {
+                    if title == "Rotinas" {
+                        addRoutineView.toggle()
+                    } else {
+                        addExerciseView.toggle()
+                    }
+                } label: {
+                    Image(systemName: "plus")
+                }
+                .padding(.trailing, 30)
             }
             .padding(.top, 50)
             if homeVM.selectedTab == "Exercise" {
@@ -52,6 +71,12 @@ struct HomeView: View {
                                     }
                                     .sheet(isPresented: $exerciseContentView) {
                                         ExerciseContentView(exercise: exerciseVM.currentExercise!, exerciseContentView: $exerciseContentView)
+                                    }
+                                    .sheet(isPresented: $addExerciseView) {
+                                        AddExerciseView(exerciseVM: exerciseVM, addExerciseView: $addExerciseView, exerciseChanged: $exerciseChanged)
+                                    }
+                                    .onChange(of: exerciseChanged) { newValue in
+                                        exerciseVM.allExercises = persistenceController.getAllExercises()
                                     }
                             }
                         }
@@ -132,6 +157,12 @@ struct HomeView: View {
                                     }
                                     .sheet(isPresented: $routineContentView) {
                                         RoutineContentView(routine: routineVM.currentRoutine!, routineContentView: $routineContentView)
+                                    }
+                                    .sheet(isPresented: $addRoutineView) {
+                                        AddRoutineView(routineVM: routineVM, addRoutineView: $addRoutineView, routineChanged: $routineChanged)
+                                    }
+                                    .onChange(of: routineChanged) { newValue in
+                                        routineVM.allRoutines = persistenceController.getAllRoutines()
                                     }
                             }
                         }

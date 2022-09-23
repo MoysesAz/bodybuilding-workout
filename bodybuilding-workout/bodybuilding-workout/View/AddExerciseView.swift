@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AddExerciseView: View {
     @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.colorScheme) var colorScheme
     @State var exerciseVM: ExerciseViewModel
     @Binding var addExerciseView: Bool
     @Binding var exerciseChanged: Bool
@@ -14,6 +15,7 @@ struct AddExerciseView: View {
                 Form {
                     Section {
                         TextField("Nome do Exercício", text: $name)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     } header: {
                         Text("Exercício")
                             .bold()
@@ -22,6 +24,7 @@ struct AddExerciseView: View {
 
                     Section {
                         TextField("Descrição do Exercício", text: $descriptions)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     } header: {
                         Text("Descrição")
                             .bold()
@@ -30,6 +33,7 @@ struct AddExerciseView: View {
 
                     Section {
                         TextField("Observações", text: $observations)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     } header: {
                         Text("Observações")
                             .bold()
