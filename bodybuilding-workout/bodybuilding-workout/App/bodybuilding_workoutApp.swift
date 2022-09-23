@@ -1,21 +1,22 @@
-//
-//  bodybuilding_workoutApp.swift
-//  bodybuilding-workout
-//
-//  Created by Moyses Miranda do Vale Azevedo on 12/09/22.
-//
-
 import SwiftUI
 
 @main
 struct bodybuilding_workoutApp: App {
+    
     let persistenceController = PersistenceController.shared
+
+    @StateObject var exerciseVM = ExerciseViewModel()
+    @StateObject var routineVM = RoutineViewModel()
+
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            MainView()
+            HomeView(exerciseVM: exerciseVM, routineVM: routineVM, persistenceController: persistenceController)
+//            ExerciseView(exerciseVM: exerciseVM, persistenceController: persistenceController)
+//            RoutineView(routineVM: routineVM, persistenceController: persistenceController)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(exerciseVM)
+                .environmentObject(routineVM)
         }
     }
 }
