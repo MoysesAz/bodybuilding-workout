@@ -33,6 +33,10 @@ struct RoutineContentView: View {
                 
                 VStack {
                     Form {
+                        Section {
+                            Text("Select your Exercise")
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                        }
                         Picker(
                             "Select: ",
                             selection: $selectedExe

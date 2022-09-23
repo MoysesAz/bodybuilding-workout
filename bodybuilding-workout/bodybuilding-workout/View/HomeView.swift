@@ -85,7 +85,7 @@ struct HomeView: View {
                 .onAppear {
                     exerciseVM.allExercises = persistenceController.getAllExercises()
                 }
-//                .padding(.top, 10)
+                //                .padding(.top, 10)
                 HStack {
                     Text("Day")
                         .font(.system(size: 24))
@@ -171,7 +171,7 @@ struct HomeView: View {
                 .onAppear {
                     routineVM.allRoutines = persistenceController.getAllRoutines()
                 }
-//                .padding(.top, 10)
+                //                .padding(.top, 10)
                 HStack {
                     Text("Day")
                         .font(.system(size: 24))
@@ -230,9 +230,3 @@ struct HomeView: View {
         .background(colorScheme == .dark ? .black : .white).ignoresSafeArea(.all, edges: .all)
     }
 }
-
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView()
-//    }
-//}
