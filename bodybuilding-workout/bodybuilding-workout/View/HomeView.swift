@@ -6,7 +6,7 @@ struct HomeView: View {
     @StateObject var homeVM = HomeViewModel()
 
     @Namespace var animation
-    @State private var title = "Rotinas"
+    @State private var title = "Workouts"
 
     let columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
 
@@ -38,7 +38,7 @@ struct HomeView: View {
                     .padding(.leading, 45)
                 Spacer()
                 Button {
-                    if title == "Rotinas" {
+                    if title == "Workouts" {
                         addRoutineView.toggle()
                     } else {
                         addExerciseView.toggle()
@@ -105,7 +105,7 @@ struct HomeView: View {
                         .onTapGesture {
                             withAnimation {
                                 homeVM.selectedTab = "Routine"
-                                title = "Rotinas"
+                                title = "Workouts"
                             }
                         }
 
@@ -127,7 +127,7 @@ struct HomeView: View {
                         .onTapGesture {
                             withAnimation {
                                 homeVM.selectedTab = "Exercise"
-                                title = "Exercícios"
+                                title = "Exercises"
                             }
                         }
                 }
@@ -156,7 +156,7 @@ struct HomeView: View {
                                         routineContentView.toggle()
                                     }
                                     .sheet(isPresented: $routineContentView) {
-                                        RoutineContentView(routine: routineVM.currentRoutine!, routineContentView: $routineContentView)
+                                        RoutineContentView(routine: routineVM.currentRoutine!, routineContentView: $routineContentView, exerciseVM: exerciseVM, selectedExe: exerciseVM.allExercises.filter({$0.ofRoutine?.objectID != routineVM.currentRoutine?.objectID}).first!)
                                     }
                                     .sheet(isPresented: $addRoutineView) {
                                         AddRoutineView(routineVM: routineVM, addRoutineView: $addRoutineView, routineChanged: $routineChanged)
@@ -191,7 +191,7 @@ struct HomeView: View {
                         .onTapGesture {
                             withAnimation {
                                 homeVM.selectedTab = "Routine"
-                                title = "Rotinas"
+                                title = "Workouts"
                             }
                         }
 
@@ -213,7 +213,7 @@ struct HomeView: View {
                         .onTapGesture {
                             withAnimation {
                                 homeVM.selectedTab = "Exercise"
-                                title = "Exercícios"
+                                title = "Exercises"
                             }
                         }
                 }
@@ -221,6 +221,10 @@ struct HomeView: View {
                 .cornerRadius(15)
                 .padding(.bottom, 50)
             }
+        }
+        .onAppear {
+            routineVM.allRoutines = persistenceController.getAllRoutines()
+            exerciseVM.allExercises = persistenceController.getAllExercises()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(colorScheme == .dark ? .black : .white).ignoresSafeArea(.all, edges: .all)

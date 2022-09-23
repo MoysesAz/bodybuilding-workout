@@ -29,9 +29,3 @@ struct RoutineCellView: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
-
-//struct ExerciseCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExerciseCellView()
-//    }
-//}

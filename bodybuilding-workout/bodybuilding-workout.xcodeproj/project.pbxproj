@@ -29,6 +29,7 @@
 		EEFE484328DCAB4C004D4513 /* RoutineCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE484228DCAB4C004D4513 /* RoutineCellView.swift */; };
 		EEFE484528DCAC4F004D4513 /* RoutineDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE484428DCAC4F004D4513 /* RoutineDropDelegate.swift */; };
 		EEFE484728DCAE31004D4513 /* RoutineContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE484628DCAE31004D4513 /* RoutineContentView.swift */; };
+		EEFE484928DDA6F9004D4513 /* AddExeToRoutineVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE484828DDA6F9004D4513 /* AddExeToRoutineVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		EEFE484228DCAB4C004D4513 /* RoutineCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellView.swift; sourceTree = "<group>"; };
 		EEFE484428DCAC4F004D4513 /* RoutineDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDropDelegate.swift; sourceTree = "<group>"; };
 		EEFE484628DCAE31004D4513 /* RoutineContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineContentView.swift; sourceTree = "<group>"; };
+		EEFE484828DDA6F9004D4513 /* AddExeToRoutineVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExeToRoutineVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				EEFE483428DBE047004D4513 /* ExerciseCellView.swift */,
 				EEFE484228DCAB4C004D4513 /* RoutineCellView.swift */,
+				EEFE484828DDA6F9004D4513 /* AddExeToRoutineVIew.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				EEFE484728DCAE31004D4513 /* RoutineContentView.swift in Sources */,
 				95F9EF8228CFCDFB004803F3 /* bodybuilding_workoutApp.swift in Sources */,
 				EEFE482F28DBAE2A004D4513 /* ExerciseView.swift in Sources */,
+				EEFE484928DDA6F9004D4513 /* AddExeToRoutineVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
